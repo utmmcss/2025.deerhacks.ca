@@ -1,25 +1,30 @@
+import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
-
-const LinkButton: React.FC<{ href: string; text: string }>= ({ href, text }) =>
-  <a href={href} className="p-4 bg-slate-800 hover:bg-slate-600 text-amber-200 duration-200 rounded-lg">
-    {text}
-  </a>
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
       <main className="w-screen h-screen flex flex-col gap-8 items-center justify-center bg-white">
-        <Image src="/logo-2025.png" alt="MCSS Logo" width={600} height={500} />
-        <p className="text-slate-900">
+        <Link href="https://mcss.club">
+          <Image src="/logo-2025.png" alt="MCSS Logo" width={600} height={500} />
+        </Link>
+        <p className="text-primary-background">
           This page is under construction for DeerHacks IV
         </p>
-        <p className="text-slate-900 font-bold txe">
+        <p className="text-primary-background font-bold txe">
           See our past hackathons
         </p>
-        <div className="flex gap-8">
-          <LinkButton href="https://2024.deerhacks.ca" text="DeerHacks III (2024)" />
-          <LinkButton href="https://2023.deerhacks.ca" text="DeerHacks II (2023)" />
-          <LinkButton href="https://2022.deerhacks.ca" text="DeerHacks I (2022)" />
+        <div className="flex gap-x-8 gap-y-4 flex-col md:flex-row">
+          <Link className={buttonVariants({ variant: 'default' })} href="https://2022.deerhacks.ca">
+            DeerHacks I (2022)
+          </Link>
+          <Link className={buttonVariants({ variant: 'default' })} href="https://2023.deerhacks.ca">
+            DeerHacks II (2023)
+          </Link>
+          <Link className={buttonVariants({ variant: 'default' })} href="https://2024.deerhacks.ca">
+            DeerHacks III (2024)
+          </Link>
         </div>
       </main>
     </div>
