@@ -91,77 +91,45 @@ const Team = () => {
           }}
         >
           <Organizer
-            name="Anthony Tedja"
-            description="i stare at the 3D model the same way how i look at my fridge"
-            avatar="/team/anthony.webp"
+            name="Henrik S. Zimmermann"
+            description="I like coding"
+            avatar="/team/henrik.jpeg"
             emoji="😘"
-            website="https://anthonytedja.com"
-            linkedin="https://linkedin.com/in/anthonytedja"
-            github="https://github.com/anthonytedja"
+            website=""
+            linkedin="https://www.linkedin.com/in/henrikszimmermann/"
+            github="https://github.com/HenrikSZ"
           />
           <Organizer
-            name="Nina Ricci Lu"
-            description="stonks master by day, mcss sugar daddy by night"
-            avatar="/team/nina.webp"
+            name="Taleen Abraham"
+            description="I like coding"
+            avatar="/team/taleen.jpeg"
             emoji="💵"
-            website="https://ninariccilu.com"
+            website=""
             linkedin="https://linkedin.com/in/ninaricci29"
           />
           <Organizer
-            name="Ivan Varquez"
-            description="i'm 5'7 but i tell people i'm 5'3¾ online so they say i look taller in person"
-            avatar="/team/ivan.webp"
-            emoji="☕"
-            website="https://varquezi.com"
-            linkedin="https://linkedin.com/in/ivanvarquez"
-            github="https://github.com/varquezi"
+            name="Abdullah Shahid"
+            description="i like coding"
+            avatar="/team/abdullah.webp"
+            emoji="💤"
+            website="https://nxabdullah.dev"
+            linkedin="https://www.linkedin.com/in/nxabdullah/"
           />
           <Organizer
-            name="Srishti Gangolly"
-            description="silly, goofy, here for giggles"
-            avatar="/team/srishti.webp"
-            emoji="😜"
-            linkedin="https://linkedin.com/in/srishti-gangolly"
+            name="Joshua Wuebbolt"
+            description="i like coding"
+            avatar="/team/joshua.jpeg"
+            emoji="💤"
+            website=""
+            linkedin=""
           />
           <Organizer
-            name="Shiva Mulwani"
-            description="money don't sleep"
-            avatar="/team/shiva.webp"
-            emoji="🤭"
-            website="https://shivamulwani.netlify.app"
-            linkedin="https://linkedin.com/in/shiva-mulwani"
-            github="https://github.com/Multivalence"
-          />
-          <Organizer
-            name="Jasmine Guruparan"
-            description="monke"
-            avatar="/team/jasmine.webp"
-            emoji="⚰️"
-            website="https://www.youtube.com/watch?v=mUk2x4r6hOY"
-            linkedin="https://linkedin.com/in/jasmine-guruparan-625395156"
-          />
-          <Organizer
-            name="Vishnu Manoj"
-            description="too brainy 200 furious"
-            avatar="/team/vishnu.webp"
-            emoji="😁"
-            linkedin="http://linkedin.com/in/vishnumanoj211101"
-          />
-          <Organizer
-            name="Carina Rastarhuyeva"
-            description="girl boss"
-            avatar="/team/carina.webp"
-            emoji="👸"
-            linkedin="https://linkedin.com/in/crastars"
-            github="https://github.com/crastars"
-          />
-          <Organizer
-            name="Akira Takaki"
-            description="professional bag fumbler"
-            avatar="/team/akira.webp"
-            emoji="🥹"
-            website="http://www.akiratakaki.com"
-            linkedin="https://linkedin.com/in/a1t"
+            name="Krit Kasikpan"
+            description="i like coding"
+            avatar="/team/krit.jpeg"
+            emoji="💤"
+            website=""
+            linkedin=""
           />
         </Marquee>
       </Container>

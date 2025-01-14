@@ -51,9 +51,9 @@ const FAQ = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                DeerHacks takes place on the weekend of February 16 - 18, 2024.
+                DeerHacks takes place on the weekend of February 14 - 16, 2025.
                 {toggles.signupHacker
-                  ? ' Hacker applications are open until January 25, 2024.'
+                  ? ' Hacker applications are open until January 28, 2025.'
                   : ' Thanks for applying to DeerHacks! We will review your applications and get back to you soon.'}
                 {toggles.signupVolunteer && toggles.signupMentor
                   ? ' Volunteer & mentor applications are open until February 2, 2024.'
@@ -146,41 +146,6 @@ const FAQ = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Collapse in={openCount === 8}>
-            <Accordion>
-              <AccordionSummary expandIcon={<AddIcon />}>
-                <Typography>Who designed this seggsy website?</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  Shameless Plug:{' '}
-                  <Link
-                    rel="noopener"
-                    href="https://github.com/anthonytedja"
-                    target="_blank"
-                    underline="always"
-                    sx={{ opacity: 0.75 }}
-                    onClick={(e) => {
-                      e.preventDefault()
-                      window.location.href = 'https://youtu.be/dQw4w9WgXcQ'
-                    }}
-                  >
-                    Anthony Tedja
-                  </Link>{' '}
-                  but lowkey{' '}
-                  <Link
-                    rel="noopener"
-                    href="https://github.com/hana-dowe"
-                    target="_blank"
-                    underline="always"
-                    sx={{ opacity: 0.75 }}
-                  >
-                    Hana Dowe.
-                  </Link>
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </Collapse>
         </Box>
       </Box>
     </Container>

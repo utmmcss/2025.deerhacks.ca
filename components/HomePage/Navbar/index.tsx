@@ -56,8 +56,8 @@ const Menu = (props: MenuProps) => {
         <>
           <Box component="div" data-aos="fade" data-aos-delay="1000" data-aos-duration="1000">
             <Tooltip title="DeerHacks 2023">
-              <Link rel="noopener" href="https://2023.deerhacks.ca">
-                2023
+              <Link rel="noopener" href="https://2024.deerhacks.ca">
+                2024
               </Link>
             </Tooltip>
           </Box>
@@ -125,24 +125,6 @@ const Menu = (props: MenuProps) => {
           />
         </Box>
       )}
-      <Box
-        component="div"
-        width={75}
-        data-aos="fade"
-        data-aos-delay="1500"
-        data-aos-duration="1500"
-      >
-        <Tooltip title="Major League Hacking">
-          <Link
-            rel="noopener"
-            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
-            target="_blank"
-            sx={{ width: 75, opacity: 1, position: 'absolute', top: 0 }}
-          >
-            <MLHBadge />
-          </Link>
-        </Tooltip>
-      </Box>
     </Box>
   )
 }

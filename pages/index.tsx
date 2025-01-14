@@ -6,7 +6,6 @@ import Grid from '@mui/material/Grid'
 import Slide from '@mui/material/Slide'
 import Typography from '@mui/material/Typography'
 
-import TileGallery from '@/components/Dashboard/TileGallery'
 import About from '@/components/HomePage/About'
 import FAQ from '@/components/HomePage/FAQ'
 import MNModel from '@/components/HomePage/MNModel'
@@ -90,11 +89,8 @@ const HomePage = () => {
                     >
                       deerhacks&nbsp;
                     </span>
-                    <span data-aos="fade" data-aos-delay="1250" data-aos-duration="1250">
-                      / MLH partnered event&nbsp;
-                    </span>
                     <span data-aos="fade" data-aos-delay="1500" data-aos-duration="1500">
-                      / 02.16.24 - 02.18.24
+                      / 02.14.25 - 02.16.25
                     </span>
                   </Typography>
                 </Grid>
@@ -104,9 +100,9 @@ const HomePage = () => {
           <About />
           <Stats />
           <Sponsors />
-          <Container>
+          {/* <Container>
             <TileGallery resize />
-          </Container>
+          </Container> */}
           <FAQ />
           <Container
             data-aos="fade"
