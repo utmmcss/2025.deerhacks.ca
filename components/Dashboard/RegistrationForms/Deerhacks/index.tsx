@@ -79,7 +79,7 @@ const DeerhacksForm = (props: Props) => {
               control={control}
               render={({ field: { ref, ...field } }) => (
                 <FormCheckbox
-                  label="Friday Dinner (Feb 16)"
+                  label="Friday Dinner (Feb 14)"
                   errors={errors}
                   inputRef={ref}
                   {...field}
@@ -91,7 +91,7 @@ const DeerhacksForm = (props: Props) => {
               control={control}
               render={({ field: { ref, ...field } }) => (
                 <FormCheckbox
-                  label="Saturday Breakfast (Feb 17)"
+                  label="Saturday Breakfast (Feb 15)"
                   errors={errors}
                   inputRef={ref}
                   {...field}
@@ -103,7 +103,7 @@ const DeerhacksForm = (props: Props) => {
               control={control}
               render={({ field: { ref, ...field } }) => (
                 <FormCheckbox
-                  label="Saturday Lunch (Feb 17)"
+                  label="Saturday Lunch (Feb 15)"
                   errors={errors}
                   inputRef={ref}
                   {...field}
@@ -115,7 +115,7 @@ const DeerhacksForm = (props: Props) => {
               control={control}
               render={({ field: { ref, ...field } }) => (
                 <FormCheckbox
-                  label="Saturday Dinner (Feb 17)"
+                  label="Saturday Dinner (Feb 15)"
                   errors={errors}
                   inputRef={ref}
                   {...field}
@@ -127,7 +127,7 @@ const DeerhacksForm = (props: Props) => {
               control={control}
               render={({ field: { ref, ...field } }) => (
                 <FormCheckbox
-                  label="Sunday Breakfast (Feb 18)"
+                  label="Sunday Breakfast (Feb 15)"
                   errors={errors}
                   inputRef={ref}
                   {...field}

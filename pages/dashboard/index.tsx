@@ -125,10 +125,10 @@ const Dashboard = () => {
                 </Grid>
               </Grid>
               <Grid container spacing={2}>
-                <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
+                {/* <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
                   <TileGallery />
-                </Grid>
-                <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
+                </Grid> */}
+                <Grid item xs={12} md={12} order={{ xs: 1, md: 2 }}>
                   <TileSchedule status={user.status} />
                 </Grid>
               </Grid>
