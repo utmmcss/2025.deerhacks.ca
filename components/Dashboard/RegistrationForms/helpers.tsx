@@ -297,9 +297,10 @@ const deerhacksFormToApp = (form: DeerhacksZodForm, currApplication: Application
     day3_breakfast: form.day3_breakfast,
 
     // MLH Permissions
-    mlh_authorize: form.mlh_authorize,
-    mlh_code_agreement: form.mlh_code_agreement,
-    mlh_subscribe: form.mlh_subscribe,
+    // Hardcoded because no MLH this year!
+    mlh_authorize: true,
+    mlh_code_agreement: true,
+    mlh_subscribe: false,
   }
 }
 
