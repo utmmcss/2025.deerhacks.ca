@@ -42,25 +42,10 @@ const Sponsors = () => {
         {/* Diamond and Platinum Sponsors Here */}
         <Featured />
         {/* Gold and Silver Sponsors Here */}
-        <Sponsor name="Uber" logo={<Uber />} link="https://uber.com" tier="silver" />
-        <Sponsor name="ICUBE UTM" logo={<ICUBE />} link="https://icubeutm.ca" tier="silver" />
-        {false && (
-          <Sponsor
-            name="Rotman"
-            logo={<Rotman />}
-            link="https://www.rotman.utoronto.ca"
-            tier="silver"
-          />
-        )}
-        <Sponsor name="MMPA" logo={<MMPA />} link="https://mmpa.utoronto.ca" tier="silver" />
-        <Sponsor
-          name="Thirstea"
-          logo={<Thirstea />}
-          link="https://thirsteacanada.com"
-          tier="silver"
-        />
+        <Sponsor name="MMPA" logo={<MMPA />} link="https://mmpa.utoronto.ca" tier="gold" />
       </Grid>
       {/* Bronze Sponsors Here */}
+      <h1>Past Sponsors</h1>
       <Grid
         container
         spacing={{ xs: 2, md: 4 }}
@@ -68,6 +53,8 @@ const Sponsors = () => {
         pb="2rem"
         justifyContent="center"
       >
+        <Sponsor name="Uber" logo={<Uber />} link="https://uber.com" tier="bronze" />
+        <Sponsor name="ICUBE UTM" logo={<ICUBE />} link="https://icubeutm.ca" tier="bronze" />
         <Sponsor name="Major League Hacking" logo={<MLH />} link="https://mlh.io" tier="bronze" />
         <Sponsor
           name="Amazon Web Services"
@@ -95,13 +82,18 @@ const Sponsors = () => {
           tier="bronze"
         />
         <Sponsor
+          name="Thirstea"
+          logo={<Thirstea />}
+          link="https://thirsteacanada.com"
+          tier="bronze"
+        />
+        <Sponsor
           name="University of Toronto"
           logo={<UofT />}
           link="https://utoronto.ca"
           tier="bronze"
         />
       </Grid>
-      <Typography variant="h2">...and more to come!</Typography>
     </Container>
   )
 }

@@ -92,36 +92,38 @@ const Team = () => {
         >
           <Organizer
             name="Henrik S. Zimmermann"
-            description="I like coding"
+            description="I like trains"
             avatar="/team/henrik.jpeg"
-            emoji="😘"
-            website=""
+            emoji="🚆"
+            website="https://henriksz.com/"
             linkedin="https://www.linkedin.com/in/henrikszimmermann/"
             github="https://github.com/HenrikSZ"
           />
           <Organizer
             name="Taleen Abraham"
-            description="I like coding"
-            avatar="/team/taleen.jpeg"
+            description=""
+            avatar="/team/taleen.jpg"
             emoji="💵"
             website=""
-            linkedin="https://linkedin.com/in/ninaricci29"
+            linkedin=""
           />
           <Organizer
             name="Abdullah Shahid"
-            description="i like coding"
+            description="Just a chill guy"
             avatar="/team/abdullah.webp"
             emoji="💤"
             website="https://nxabdullah.dev"
             linkedin="https://www.linkedin.com/in/nxabdullah/"
+            github="https://github.com/nxabdullah"
           />
           <Organizer
             name="Joshua Wuebbolt"
-            description="i like coding"
+            description="Anyone wanna play Mario Party?"
             avatar="/team/joshua.jpeg"
-            emoji="💤"
-            website=""
-            linkedin=""
+            emoji="🥂"
+            website="joshuawuebbolt.com"
+            linkedin="https://www.linkedin.com/in/joshuawuebbolt/"
+            github="https://github.com/JoshuaWuebbolt"
           />
           <Organizer
             name="Krit Kasikpan"
