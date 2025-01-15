@@ -8,10 +8,10 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <link rel="canonical" href="https://2024.deerhacks.ca" />
+        <link rel="canonical" href="https://2025.deerhacks.ca" />
         <meta
           name="description"
-          content="DeerHacks is the largest annual hackathon at University of Toronto Mississauga. Join us on February 16-18, 2024 for a weekend of prizes, development, and innovation!"
+          content="DeerHacks is the largest annual hackathon at University of Toronto Mississauga. Join us on February 14-16, 2025 for a weekend of prizes, development, and innovation!"
         />
         <meta name="keywords" content="DeerHacks, MCSS, DeerHacks UTM, DeerHacks Hackathon" />
         <meta name="theme-color" content="#181818" />
@@ -20,7 +20,7 @@ export default function Document() {
         <meta property="og:title" content="DeerHacks" />
         <meta
           property="og:description"
-          content="DeerHacks is the largest annual hackathon at University of Toronto Mississauga. Join us on February 16-18, 2024 for a weekend of prizes, development, and innovation!"
+          content="DeerHacks is the largest annual hackathon at University of Toronto Mississauga. Join us on February 14-16, 2025 for a weekend of prizes, development, and innovation!"
         />
         <meta property="og:image" content="/backgrounds/collage_close.jpg" />
         <meta property="twitter:image" content="/backgrounds/collage_close.jpg" />
