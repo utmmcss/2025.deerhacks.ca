@@ -276,8 +276,8 @@ export const deerhacksZodForm = intersection(
     day2_lunch: boolean(),
     day2_dinner: boolean(),
     day3_breakfast: boolean(),
-    mlh_authorize: checkBoxRequired,
-    mlh_code_agreement: checkBoxRequired,
+    mlh_authorize: boolean(),
+    mlh_code_agreement: boolean(),
     mlh_subscribe: boolean(),
   })
 )
