@@ -125,7 +125,7 @@ const TileUser = (props: Props) => {
               >
                 {user.first_name && user.last_name
                   ? `${user.first_name} ${user.last_name}`
-                  : 'Welcome to DH III'}
+                  : 'Welcome to DH IV'}
               </Typography>
               <Typography noWrap textAlign={{ xs: 'center', md: 'left' }}>
                 {user.email}

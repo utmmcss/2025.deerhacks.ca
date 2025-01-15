@@ -206,13 +206,6 @@ const FormReview = (props: Props) => {
         />
         <br />
         <FieldReview name="Meals" value={getMeals(application)} isList />
-        <br />
-        <CheckBoxReview
-          name="MLH Terms and Conditions & Privacy Policy"
-          value={application.mlh_authorize}
-        />
-        <CheckBoxReview name="MLH Code of Conduct" value={application.mlh_code_agreement} />
-        <CheckBoxReview name="MLH Email Subscription" value={application.mlh_subscribe} />
       </Grid>
 
       {onSubmit && <Button onClick={onSubmit}>Submit Application</Button>}

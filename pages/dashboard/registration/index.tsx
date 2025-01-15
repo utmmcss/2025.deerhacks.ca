@@ -101,7 +101,7 @@ const Registration = (props: Props) => {
     },
     DeerHacks: {
       heading: 'DeerHacks',
-      subHeadings: ['Reach', 'Meals', 'MLH Permissions'],
+      subHeadings: ['Reach', 'Meals'],
       form: useForm<DeerhacksZodForm>({
         mode: 'onChange',
         resolver: zodResolver(deerhacksZodForm),
