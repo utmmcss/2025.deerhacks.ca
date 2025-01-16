@@ -193,7 +193,7 @@ const FormReview = (props: Props) => {
           value={application.shared_project}
         />
         <FieldReview
-          name="In your opinion, what is the most exciting or groundbreaking technology trend right now, and how might it impact our daily lives in the future?"
+          name="DeerHacks IV: Hack the Horizon is centered around the theme of pushing past your comfort zone in pursuit of learning more. Tell us how you plan to surpass your limits and try something new at DeerHacks IV."
           value={application.future_tech}
         />
       </Grid>

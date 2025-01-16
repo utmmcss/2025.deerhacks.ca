@@ -51,6 +51,12 @@ export const emailField = string()
   .min(1, 'Required')
   .max(128, 'Maximum Character Count Reached')
   .email('Invalid Email Address')
+  .refine(
+    (email: string) => email.endsWith('@mail.utoronto.ca') || email.endsWith('@utoronto.ca'),
+    {
+      message: 'Email must be a University of Toronto email address',
+    }
+  )
 
 export const urlField = string()
   .trim()

@@ -101,7 +101,7 @@ const Team = () => {
           />
           <Organizer
             name="Taleen Abraham"
-            description=""
+            description="<3"
             avatar="/team/taleen.jpg"
             emoji="💵"
             website=""
@@ -127,11 +127,19 @@ const Team = () => {
           />
           <Organizer
             name="Krit Kasikpan"
-            description="i like coding"
+            description=""
             avatar="/team/krit.jpeg"
             emoji="💤"
             website=""
             linkedin=""
+          />
+          <Organizer
+            name="Ana Elisa Lopez-Miranda"
+            description=""
+            avatar="/team/ana.jpeg"
+            emoji="🫶"
+            website=""
+            linkedin="www.linkedin.com/in/ana-elisa-lopez-miranda-410b81204"
           />
         </Marquee>
       </Container>

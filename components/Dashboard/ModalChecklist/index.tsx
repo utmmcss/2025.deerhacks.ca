@@ -70,7 +70,7 @@ const ModalChecklist = (props: Props) => {
           <InfoCheckbox
             icon={<BadgeIcon />}
             label="Identification"
-            tooltip="Registration requires at least one government issued identification, such as a drivers license, health card, or passport"
+            tooltip="Registration requires a valid T-card issued by the University of Toronto"
           />
           <InfoCheckbox
             icon={<SmartphoneIcon />}

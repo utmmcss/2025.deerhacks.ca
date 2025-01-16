@@ -123,7 +123,7 @@ const AccountCreate = (props: Props) => {
               control={control}
               render={({ field: { ref, ...field } }) => (
                 <TextField
-                  label="Email"
+                  label="UofT Email"
                   error={Boolean(errors.email)}
                   placeholder={user.email}
                   helperText={errors.email?.message}
