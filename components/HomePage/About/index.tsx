@@ -93,7 +93,7 @@ const About = () => {
           width="min(100%, 300px)"
           pt="3rem"
         >
-          <SignUpButton text="Dare to Glow!" href="/login" glow fullWidth />
+          <SignUpButton text="Hack the Horizon!" href="/login" glow fullWidth />
         </Box>
       )}
       {toggles.signupVolunteer && toggles.signupMentor && (

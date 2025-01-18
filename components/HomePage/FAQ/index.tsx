@@ -100,9 +100,8 @@ const FAQ = () => {
             <AccordionDetails>
               <Typography>
                 DeerHacks is targeted towards students who are 18 years or older of all skill levels
-                who are eager to learn and meet new people. Hackers must be enrolled in a post
-                secondary institution, but not limited to University of Toronto, to be eligible for
-                registration.
+                who are eager to learn and meet new people. Hackers must be enrolled into University
+                of Toronto, to be eligible for registration.
               </Typography>
             </AccordionDetails>
           </Accordion>

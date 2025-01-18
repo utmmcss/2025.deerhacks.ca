@@ -141,7 +141,7 @@ export const photoListStatic: PhotoListResp = {
         createdAt: '2024-02-21T01:14:56.379Z',
         updatedAt: '2024-02-21T02:15:15.911Z',
         publishedAt: '2024-02-21T02:15:15.822Z',
-        alt: 'Dare to Glow',
+        alt: 'Hack The Horizon',
         img: {
           data: {
             id: 23,
