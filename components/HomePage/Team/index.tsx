@@ -149,6 +149,15 @@ const Team = () => {
             website="https://dhxuva.github.io/Portfolio/"
             linkedin="https://www.linkedin.com/in/dhruva-bhatt"
           />
+          <Organizer
+            name="Saurabh Nair"
+            description="Touch Grass Bro 🙂"
+            avatar="/team/saurab.png"
+            emoji="🙂"
+            github="https://github.com/saurabh13113"
+            website="https://saurabhnair.com/"
+            linkedin="https://www.linkedin.com/in/saurabh-nair-bb66781b4"
+          />
         </Marquee>
       </Container>
       <Suspense>
