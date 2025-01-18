@@ -2,10 +2,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/router'
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
+import Dialog from '@mui/material/Dialog'
+import DialogActions from '@mui/material/DialogActions'
+import DialogContent from '@mui/material/DialogContent'
+import DialogContentText from '@mui/material/DialogContentText'
+import DialogTitle from '@mui/material/DialogTitle'
 import Fade from '@mui/material/Fade'
 import Typography from '@mui/material/Typography'
 
@@ -28,13 +33,24 @@ const Verify = () => {
 
   const { data, mutate: emailVerify, isLoading, isSuccess, isError } = useEmailVerify()
 
-  useEffect(() => {
-    // Workaround since React StrictMode runs twice in development
-    if (initialized.current || !toggles.dashboard) return
-    if (!token) return
+  const [openModal, setOpenModal] = useState(true)
+
+  const handleConfirm = () => {
+    if (!token || !toggles.dashboard) return
     emailVerify({ token })
+    setOpenModal(false)
     initialized.current = true
-  }, [emailVerify, token, toggles.dashboard])
+  }
+
+  const handleCancel = () => {
+    setOpenModal(false)
+    router.replace('/dashboard')
+  }
+
+  useEffect(() => {
+    if (initialized.current || !toggles.dashboard) return
+    // The modal will control whether we proceed
+  }, [toggles.dashboard])
 
   if (!toggles.dashboard || !token) return <Error404Page noTitle />
   if (isError) return <Error500Page />
@@ -44,6 +60,7 @@ const Verify = () => {
       <Head>
         <title>Verify | DeerHacks</title>
       </Head>
+
       {isLoading || !isSuccess ? (
         <FullPageSpinner />
       ) : (
@@ -124,6 +141,31 @@ const Verify = () => {
           </Container>
         </Fade>
       )}
+
+      <Dialog
+        open={openModal}
+        onClose={handleCancel}
+        sx={{
+          zIndex: 99999999,
+        }}
+      >
+        {' '}
+        <DialogTitle>Confirm Email Verification</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            By clicking confirm, you will verify your email using the provided token. Do you wish to
+            proceed?
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCancel} color="secondary">
+            Cancel
+          </Button>
+          <Button onClick={handleConfirm} color="primary">
+            Confirm
+          </Button>
+        </DialogActions>
+      </Dialog>
     </>
   )
 }
