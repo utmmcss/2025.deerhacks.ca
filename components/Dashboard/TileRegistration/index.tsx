@@ -60,7 +60,7 @@ const TileRegistration = (props: Props) => {
                     : 'during this time. Thanks for checking our DeerHacks!'
                 }`
               : status === 'registering'
-              ? 'Get started on your registration for DeerHacks! Hacker applications are open until January 29'
+              ? 'Get started on your registration for DeerHacks! Hacker applications are open until January 31'
               : noApplication
               ? `${status.title()}s cannot register as hackers`
               : 'Revisit your application to DeerHacks'}

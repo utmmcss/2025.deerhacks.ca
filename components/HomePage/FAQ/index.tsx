@@ -53,7 +53,7 @@ const FAQ = () => {
               <Typography>
                 DeerHacks takes place on the weekend of February 14 - 16, 2025.
                 {toggles.signupHacker
-                  ? ' Hacker applications are open until January 29, 2025.'
+                  ? ' Hacker applications are open until January 31, 2025.'
                   : ' Thanks for applying to DeerHacks! We will review your applications and get back to you soon.'}
                 {toggles.signupVolunteer && toggles.signupMentor
                   ? ' Volunteer & mentor applications are open until February 2, 2024.'
