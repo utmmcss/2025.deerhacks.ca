@@ -141,6 +141,14 @@ const Team = () => {
             website=""
             linkedin="www.linkedin.com/in/ana-elisa-lopez-miranda-410b81204"
           />
+          <Organizer
+            name="Dhruva Bhatt"
+            description="faith, trust and pixie dust"
+            avatar="/team/dhruva.jpg"
+            emoji="🍀"
+            website="https://dhxuva.github.io/Portfolio/"
+            linkedin="https://www.linkedin.com/in/dhruva-bhatt"
+          />
         </Marquee>
       </Container>
       <Suspense>
