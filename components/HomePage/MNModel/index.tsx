@@ -7,10 +7,10 @@ import Typography from '@mui/material/Typography'
 
 import { useToast } from '@/contexts/Toast'
 import { Environment, OrbitControls, PerformanceMonitor, Preload, useGLTF } from '@react-three/drei'
-import { Canvas, extend } from '@react-three/fiber'
+import { Canvas, extend, useFrame } from '@react-three/fiber'
 import { Bloom, EffectComposer, Noise, ToneMapping } from '@react-three/postprocessing'
 import { suspend } from 'suspend-react'
-import { Mesh } from 'three'
+import { Mesh, MeshStandardMaterial, RepeatWrapping,TextureLoader } from 'three'
 import { GLTF, GLTFLoader } from 'three-stdlib'
 
 extend({ OrbitControls })
@@ -19,61 +19,123 @@ type Props = {
   onAfterRender?: () => void
 }
 
-type ModelProps = Props & {
+type ModelProps = {
+  onAfterRender?: () => void
   onError: () => void
 }
 
 const environment = import('@pmndrs/assets/hdri/city.exr').then((module) => module.default)
-useGLTF.preload('./mn.glb')
+useGLTF.preload('./sun.glb')
 
 const Model = (props: ModelProps) => {
-  const { onAfterRender, onError } = props
+  const { onAfterRender, onError } = props;
+  const [model, setModel] = useState<GLTF | null>(null);
+  
+  // Create sun material with emissive properties
+  const sunMaterial = new MeshStandardMaterial({
+    color: 0xffdd00,
+    emissive: 0xff8800,
+    emissiveIntensity: 1,
+    roughness: 0.7,
+    metalness: 0,
+  });
 
-  const [model, setModel] = useState<GLTF>()
+  // Add noise texture for surface detail
+  useEffect(() => {
+    const textureLoader = new TextureLoader();
+    textureLoader.load('./noise-texture.jpg', (texture) => {
+      texture.wrapS = texture.wrapT = RepeatWrapping;
+      texture.repeat.set(2, 2);
+      sunMaterial.displacementMap = texture;
+      sunMaterial.displacementScale = 0.05;
+    });
+  }, []);
 
+  // Load the base model
   useEffect(() => {
     const loadModel = async () => {
       try {
-        const gltf = await new GLTFLoader().loadAsync('./mn.glb')
-        setModel(gltf)
-      } catch (err) {
-        onError()
+        const gltf = await new GLTFLoader().loadAsync('./sun.glb');
+        setModel(gltf);
+      } catch (error) {
+        console.error('Error loading GLB model:', error);
+        onError();
       }
+    };
+
+    loadModel();
+  }, [onError]);
+
+  // Animate the sun's surface
+  useFrame((state) => {
+    if (sunMaterial.displacementMap) {
+      sunMaterial.displacementMap.offset.x += 0.001;
+      sunMaterial.displacementMap.offset.y += 0.001;
     }
-    loadModel()
-  }, [onError])
+  });
 
-  if (!model) return null
+  if (!model) return null;
 
-  const MN_Cube = model.scenes[0].children[0].children[0] as Mesh
-  const MN_Cube_1 = model.scenes[0].children[0].children[1] as Mesh
-  const MN_Wireframe = model.scenes[0].children[1] as Mesh
+  const { scenes } = model;
+  if (scenes.length === 0) {
+    console.error('The GLB file contains no scenes.');
+    return null;
+  }
+
+  const scene = scenes[0];
+  const [sunMesh] = scene.children.filter(
+    (child): child is Mesh => child instanceof Mesh
+  );
+
+  if (!sunMesh) {
+    console.error('Expected mesh components are missing in the model.');
+    return null;
+  }
 
   return (
-    <group dispose={null} position={[0, 0, -0.25]}>
+    <group dispose={null} position={[0, 0, 0]}>
+      {/* Main sun mesh */}
       <mesh
-        geometry={MN_Cube.geometry}
-        material={MN_Cube.material}
-        scale={[0.49, 0.255, 1.7]}
-        position={[0, 0.13, 0.13]}
-      />
-      <mesh
-        geometry={MN_Cube_1.geometry}
-        material={MN_Cube_1.material}
-        scale={[0.49, 0.255, 1.7]}
-        position={[0, 0.13, 0.13]}
-      />
-      <mesh
-        geometry={MN_Wireframe.geometry}
-        material={MN_Wireframe.material}
-        scale={[0.525, 0.275, 1.775]}
-        material-toneMapped={false}
-        material-emissiveIntensity={3.65}
+        geometry={sunMesh.geometry}
+        material={sunMaterial}
         onAfterRender={() => onAfterRender?.()}
-      />
+      >
+        {/* Add point lights to create sun-like illumination */}
+        <pointLight
+          position={[0, 0, 0]}
+          intensity={2}
+          color={0xffdd00}
+          distance={10}
+          decay={2}
+        />
+        <pointLight
+          position={[0, 0, 0]}
+          intensity={1.5}
+          color={0xff8800}
+          distance={15}
+          decay={2}
+        />
+        <pointLight
+          position={[0, 0, 0]}
+          intensity={1.2}
+          color={0xffdd00}
+          distance={20}
+          decay={2}
+        />
+      </mesh>
+
+      {/* Corona effect using a larger, semi-transparent sphere */}
+      <mesh>
+        <sphereGeometry args={[1.2, 32, 32]} />
+        <meshBasicMaterial
+          color={0xffaa00}
+          transparent={true}
+          opacity={0.1}
+        />
+      </mesh>
     </group>
-  )
-}
+  );
+};
 
 const MNModel = (props: Props) => {
   const { onAfterRender } = props
@@ -112,8 +174,13 @@ const MNModel = (props: Props) => {
         m: { xs: '2rem 1rem', lg: '2rem' },
         width: { xs: 'calc(100% - 2rem)', lg: 'calc(100% - 4rem)' },
         borderRadius: '1rem',
-        backgroundImage:
-          'radial-gradient(circle closest-corner at 25% 60%, rgba(238, 39, 39, 0.25), rgba(255, 255, 255, 0)), radial-gradient(circle farthest-side at 71% 16%, rgba(154, 39, 238, 0.15), rgba(255, 255, 255, 0) 35%), radial-gradient(circle closest-corner at 32% 38%, rgba(238, 164, 39, 0.1), rgba(255, 255, 255, 0) 76%), radial-gradient(circle farthest-side at 69% 81%, rgba(255, 0, 48, 0.1), rgba(255, 255, 255, 0) 76%), linear-gradient(#202124, #202124)',
+        backgroundImage: `
+          linear-gradient(to bottom, 
+            rgba(128, 0, 0, 1) 0%,  /* Maroon sky */
+            rgba(255, 0, 0, 1) 60%, /* Red for transition */
+            rgba(255, 127, 80, 0.5) 75%,  /* Orange for ground */
+            rgba(255, 255, 0, 1) 100%     /* Yellow for ground */
+          )`,
       }}
     >
       {hasHWA && !fallback ? (
@@ -149,7 +216,7 @@ const MNModel = (props: Props) => {
               adaptive
               resolution={256}
               middleGrey={0.4}
-              maxLuminance={16.0}
+              maxLuminance={20.0}
               averageLuminance={1.0}
               adaptationRate={1.0}
             />
@@ -209,5 +276,4 @@ const MNModel = (props: Props) => {
     </Container>
   )
 }
-
 export default MNModel
