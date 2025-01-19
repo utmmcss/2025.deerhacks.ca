@@ -279,11 +279,11 @@ const CheckBoxReview = (props: CheckBoxReviewProps) => {
 const getMeals = (app: Application) => {
   const meals = []
 
-  if (app.day1_dinner) meals.push('Friday Dinner (Feb 16)')
-  if (app.day2_breakfast) meals.push('Saturday Breakfast (Feb 17)')
-  if (app.day2_lunch) meals.push('Saturday Lunch (Feb 17)')
-  if (app.day2_dinner) meals.push('Saturday Dinner (Feb 17)')
-  if (app.day3_breakfast) meals.push('Sunday Breakfast (Feb 18)')
+  if (app.day1_dinner) meals.push('Friday Dinner (Feb 14)')
+  if (app.day2_breakfast) meals.push('Saturday Breakfast (Feb 15)')
+  if (app.day2_lunch) meals.push('Saturday Lunch (Feb 15)')
+  if (app.day2_dinner) meals.push('Saturday Dinner (Feb 15)')
+  if (app.day3_breakfast) meals.push('Sunday Breakfast (Feb 16)')
 
   return meals.length ? formatList(meals) : 'None'
 }
