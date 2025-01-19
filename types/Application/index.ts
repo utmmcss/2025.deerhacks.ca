@@ -475,6 +475,7 @@ export const deerhacksExperienceOptions = [
   'DeerHacks First Timer',
   'DeerHacks I (April 2022)',
   'DeerHacks II (April 2023)',
+  'DeerHacks III (February 2024)',
 ] as const
 
 export const teamPreferenceOptions = [
