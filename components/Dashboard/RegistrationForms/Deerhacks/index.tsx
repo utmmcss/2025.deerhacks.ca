@@ -127,7 +127,7 @@ const DeerhacksForm = (props: Props) => {
               control={control}
               render={({ field: { ref, ...field } }) => (
                 <FormCheckbox
-                  label="Sunday Breakfast (Feb 15)"
+                  label="Sunday Breakfast (Feb 16)"
                   errors={errors}
                   inputRef={ref}
                   {...field}
