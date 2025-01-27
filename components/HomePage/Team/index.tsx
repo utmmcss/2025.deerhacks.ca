@@ -150,6 +150,14 @@ const Team = () => {
             linkedin="https://www.linkedin.com/in/dhruva-bhatt"
           />
           <Organizer
+            name="Raifa Sarwar"
+            description="argumentative and antithetical."
+            avatar="/team/raifa.jpg"
+            emoji="🪐"
+            website=""
+            linkedin="www.linkedin.com/in/raifa-sarwar-469ba217b"
+          />
+          <Organizer
             name="Saurabh Nair"
             description="Touch Grass Bro 🙂"
             avatar="/team/saurab.png"
