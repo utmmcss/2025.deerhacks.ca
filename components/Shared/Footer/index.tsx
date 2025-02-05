@@ -24,7 +24,7 @@ const Footer = () => {
             flexWrap="wrap"
           >
             <Typography color="text.primary">DeerHacks © 2025</Typography>
-            <Tooltip title="DeerHacks 2023" placement="top">
+            <Tooltip title="DeerHacks 2024" placement="top">
               <Link rel="noopener" href="https://2024.deerhacks.ca">
                 2024
               </Link>

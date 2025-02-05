@@ -55,7 +55,7 @@ const Menu = (props: MenuProps) => {
       {!toggles.dashboard && (
         <>
           <Box component="div" data-aos="fade" data-aos-delay="1000" data-aos-duration="1000">
-            <Tooltip title="DeerHacks 2023">
+            <Tooltip title="DeerHacks 2024">
               <Link rel="noopener" href="https://2024.deerhacks.ca">
                 2024
               </Link>
