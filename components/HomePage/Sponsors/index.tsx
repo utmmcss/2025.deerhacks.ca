@@ -18,6 +18,7 @@ import Uber from '@/components/HomePage/Sponsors/Assets/Uber'
 import UofT from '@/components/HomePage/Sponsors/Assets/UofT'
 import Featured from '@/components/HomePage/Sponsors/Featured'
 import Sponsor from '@/components/HomePage/Sponsors/Sponsor'
+import MScAC from '@/components/HomePage/Sponsors/Assets/MScAC'
 
 const Sponsors = () => {
   return (
@@ -43,6 +44,7 @@ const Sponsors = () => {
         <Featured />
         {/* Gold and Silver Sponsors Here */}
         <Sponsor name="MMPA" logo={<MMPA />} link="https://mmpa.utoronto.ca" tier="gold" />
+        <Sponsor name="MScAC" logo={<MScAC />} link="https://mscac.utoronto.ca/" tier="gold" />
       </Grid>
       {/* Bronze Sponsors Here */}
       <h1>Past Sponsors</h1>
