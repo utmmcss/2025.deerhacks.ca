@@ -10,7 +10,8 @@ import Echo3D from '@/components/HomePage/Sponsors/Assets/Echo3D'
 import ICUBE from '@/components/HomePage/Sponsors/Assets/ICUBE'
 import MLH from '@/components/HomePage/Sponsors/Assets/MLH'
 import MMPA from '@/components/HomePage/Sponsors/Assets/MMPA'
-//import Rotman from '@/components/HomePage/Sponsors/Assets/Rotman'
+import MScAC from '@/components/HomePage/Sponsors/Assets/MScAC'
+import Rotman from '@/components/HomePage/Sponsors/Assets/Rotman'
 import SilverSpoon from '@/components/HomePage/Sponsors/Assets/SilverSpoon'
 import StandoutStickers from '@/components/HomePage/Sponsors/Assets/StandoutStickers'
 import Thirstea from '@/components/HomePage/Sponsors/Assets/Thirstea'
@@ -18,7 +19,6 @@ import Uber from '@/components/HomePage/Sponsors/Assets/Uber'
 import UofT from '@/components/HomePage/Sponsors/Assets/UofT'
 import Featured from '@/components/HomePage/Sponsors/Featured'
 import Sponsor from '@/components/HomePage/Sponsors/Sponsor'
-import MScAC from '@/components/HomePage/Sponsors/Assets/MScAC'
 
 const Sponsors = () => {
   return (
