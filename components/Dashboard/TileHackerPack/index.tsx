@@ -15,7 +15,7 @@ type Props = {
 const TileHackerPack = (props: Props) => {
   const { status } = props
 
-  const disabled = ['pending', 'registering', 'applied', 'selected', 'rejected', 'accepted'].includes(status)
+  const disabled = ['pending', 'registering', 'applied', 'selected', 'rejected'].includes(status)
 
   return (
     <Card
