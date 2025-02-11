@@ -20,7 +20,7 @@ type Props = {
 const TileSchedule = (props: Props) => {
   const { status } = props
 
-  const disabled = ['pending', 'registering', 'applied', 'selected', 'rejected', 'accepted'].includes(status)
+  const disabled = ['pending', 'registering', 'applied', 'selected', 'rejected'].includes(status)
   const { data, isLoading, isError } = useEventList({ enabled: !disabled })
 
   const hasEvents = !isLoading && data?.data?.length !== 0
