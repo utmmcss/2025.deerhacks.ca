@@ -216,8 +216,8 @@ export const eventListStatic: EventListResp = {
         description:
           '',
         location: 'Outside MN',
-        startTime: '2025-02-15T14:00:00.000Z',
-        endTime: '2025-02-15T14:30:00.000Z',
+        startTime: '2025-02-15T14:30:00.000Z',
+        endTime: '2025-02-15T15:00:00.000Z',
         important: false,
         host: 'mcss',
         type: 'activity',
