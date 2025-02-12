@@ -45,6 +45,12 @@ const Sponsors = () => {
         {/* Gold and Silver Sponsors Here */}
         <Sponsor name="MMPA" logo={<MMPA />} link="https://mmpa.utoronto.ca" tier="gold" />
         <Sponsor name="MScAC" logo={<MScAC />} link="https://mscac.utoronto.ca/" tier="gold" />
+        <Sponsor
+          name="Rotman"
+          logo={<Rotman />}
+          link="https://www.rotman.utoronto.ca/"
+          tier="gold"
+        />
       </Grid>
       {/* Bronze Sponsors Here */}
       <h1>Past Sponsors</h1>
