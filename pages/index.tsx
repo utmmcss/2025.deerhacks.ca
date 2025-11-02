@@ -90,7 +90,7 @@ const HomePage = () => {
                       deerhacks&nbsp;
                     </span>
                     <span data-aos="fade" data-aos-delay="1500" data-aos-duration="1500">
-                      / 02.14.25 - 02.16.25
+                      / 02.20.26 - 02.22.26
                     </span>
                   </Typography>
                 </Grid>
