@@ -3,7 +3,7 @@ const DeerHacksTitle = () => {
     <svg width="100%" viewBox="0 0 1248 126" fill="none" xmlns="http://www.w3.org/2000/svg">
       <desc>
         Collage created by Anthony Tedja https://github.com/anthonytedja for the intended use of
-        DeerHacks 2024
+        DeerHacks 2025
       </desc>
       <g clipPath="url(#clip0_425_65)">
         <path

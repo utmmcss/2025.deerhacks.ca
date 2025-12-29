@@ -13,6 +13,7 @@ import Navbar from '@/components/HomePage/Navbar'
 import Sponsors from '@/components/HomePage/Sponsors'
 import Stats from '@/components/HomePage/Stats'
 import Team from '@/components/HomePage/Team'
+import EmailSubscription from '@/components/HomePage/EmailSubscription'
 import DeerHacksCollage from '@/components/Shared/DeerHacksCollage'
 import FullPageLoader from '@/components/Shared/FullPageLoader'
 import theme from '@/styles/theme'
@@ -100,6 +101,7 @@ const HomePage = () => {
           <About />
           <Stats />
           <Sponsors />
+          <EmailSubscription />
           {/* <Container>
             <TileGallery resize />
           </Container> */}

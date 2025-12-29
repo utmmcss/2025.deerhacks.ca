@@ -23,10 +23,10 @@ const Footer = () => {
             alignItems="center"
             flexWrap="wrap"
           >
-            <Typography color="text.primary">DeerHacks © 2025</Typography>
-            <Tooltip title="DeerHacks 2024" placement="top">
-              <Link rel="noopener" href="https://2024.deerhacks.ca">
-                2024
+            <Typography color="text.primary">DeerHacks © 2026</Typography>
+            <Tooltip title="DeerHacks 2025" placement="top">
+              <Link rel="noopener" href="https://2025.deerhacks.ca">
+                2025
               </Link>
             </Tooltip>
             <Tooltip title="Instagram" placement="top">
