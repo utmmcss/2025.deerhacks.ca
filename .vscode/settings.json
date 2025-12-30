@@ -4,7 +4,7 @@
   // Fix all autofixable errors on file save
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
-    "source.organizeImports": "never"
+    "source.organizeImports": "always"
   },
   // Fix formatting issues on file save
   "editor.formatOnSave": true,

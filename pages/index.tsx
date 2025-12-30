@@ -7,6 +7,7 @@ import Slide from '@mui/material/Slide'
 import Typography from '@mui/material/Typography'
 
 import About from '@/components/HomePage/About'
+import EmailSubscription from '@/components/HomePage/EmailSubscription'
 import FAQ from '@/components/HomePage/FAQ'
 import MNModel from '@/components/HomePage/MNModel'
 import Navbar from '@/components/HomePage/Navbar'
@@ -100,6 +101,7 @@ const HomePage = () => {
           <About />
           <Stats />
           <Sponsors />
+          <EmailSubscription />
           {/* <Container>
             <TileGallery resize />
           </Container> */}

@@ -8,7 +8,6 @@ import Grid from '@mui/material/Grid'
 
 import TileChecklist from '@/components/Dashboard/TileChecklist'
 import TileDevpost from '@/components/Dashboard/TileDevpost'
-import TileGallery from '@/components/Dashboard/TileGallery'
 import TileHackerPack from '@/components/Dashboard/TileHackerPack'
 import TileInstagram from '@/components/Dashboard/TileInstagram'
 import TileLinkedIn from '@/components/Dashboard/TileLinkedIn'
