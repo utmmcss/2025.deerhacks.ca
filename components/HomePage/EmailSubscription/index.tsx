@@ -1,4 +1,3 @@
-import { SxProps, Theme } from '@mui/material/styles'
 import { useState } from 'react'
 
 import Alert from '@mui/material/Alert'
@@ -10,16 +9,6 @@ import Snackbar from '@mui/material/Snackbar'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 
-
-const subscriptionBoxStyle: SxProps<Theme> = {
-    background: 'rgba(255, 255, 255, 0.05)',
-    backdropFilter: 'blur(10px)',
-    borderRadius: 4,
-    p: { xs: 3, md: 6 },
-    maxWidth: 'md',
-    mx: 'auto',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
-}
 
 const EmailSubscription = () => {
     const [email, setEmail] = useState('')
@@ -60,7 +49,16 @@ const EmailSubscription = () => {
     return (
         <Container id="subscription" sx={{ py: 8, textAlign: 'center' }}>
             <Box
-                sx={subscriptionBoxStyle}
+                // @ts-ignore
+                sx={{
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    backdropFilter: 'blur(10px)',
+                    borderRadius: 4,
+                    p: { xs: 3, md: 6 },
+                    maxWidth: 'md',
+                    mx: 'auto',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                }}
                 data-aos="fade-up"
             >
                 <Typography variant="h3" gutterBottom color="text.primary" sx={{ fontWeight: 'bold' }}>
