@@ -1,15 +1,14 @@
 import { useState } from 'react'
 
+import Alert from '@mui/material/Alert'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import CircularProgress from '@mui/material/CircularProgress'
 import Container from '@mui/material/Container'
 import Snackbar from '@mui/material/Snackbar'
-import Alert from '@mui/material/Alert'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 
-import theme from '@/styles/theme'
 
 const EmailSubscription = () => {
     const [email, setEmail] = useState('')
