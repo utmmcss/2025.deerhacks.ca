@@ -2,7 +2,7 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # Check ESLint Standards
-yarn lint ||
+npm run lint ||
 (
         echo '😤🏀👋😤 Failed linting! 😤🏀👋😤 
                 ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
@@ -10,7 +10,7 @@ yarn lint ||
 )
 
 # Check tsconfig standards
-yarn check-types ||
+npm run check-types ||
 (
     echo '😳😥❌😳 Failed Type check! 😳😥❌😳
                 Make the changes required above.'
