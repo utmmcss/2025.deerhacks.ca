@@ -13,7 +13,7 @@ This project is an open source archive of the DeerHacks 2024 Website & Dashboard
 
 ## Setup
 
-1. Run `yarn install` to install dependencies
+1. Run `npm install` to install dependencies
 2. Install all the required workspace `@recommended` extensions
 3. Add the required `.env` files from discord `#configs` / mcss drive
 
@@ -22,7 +22,7 @@ This project is an open source archive of the DeerHacks 2024 Website & Dashboard
 First, run the development server:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -38,8 +38,8 @@ Ensure that the ports and environments are configured to work with each other.
 Run the commands to catch any linting / type errors:
 
 ```bash
-yarn lint
-yarn check-types
+npm run lint
+npm run check-types
 ```
 
 These commands are run before pushing with `husky` and in our CI/CD pipeline with `GitHub Actions`.

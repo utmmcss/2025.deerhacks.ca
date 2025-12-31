@@ -24,13 +24,13 @@ jobs:
         with:
           path: |
             **/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Run lint command
-        run: yarn lint
+        run: npm run lint
 
       - name: Run check-types command
-        run: yarn check-types
+        run: npm run check-types
